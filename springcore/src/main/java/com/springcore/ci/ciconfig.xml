@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<bean class="com.springcore.ci.Certi" name="cer" c:name="Android "/>
+	
+	
+<bean class="com.springcore.ci.Person" name="person">
+
+	<constructor-arg>
+		<value>Anubhav</value>
+	</constructor-arg>
+	<constructor-arg value="12 "/>
+	<constructor-arg ref="cer" />
+	   <constructor-arg>
+	   		<list>
+	   		<value>23</value>
+	   		<value>324</value>
+	   		<value>334</value>
+	   		</list>
+	   </constructor-arg>
+
+</bean>
+<bean class="com.springcore.ci.Addition" name="add">
+	<constructor-arg value="12" type="int" index="0"/>
+	<constructor-arg value="34" type="int" index="1"/>
+</bean>
+</beans>
